@@ -24,8 +24,8 @@
         >
             <a-assets>
                 <a-asset-item
-                    id="afro"
-                    src="assets/asset.gltf"
+                    id="diogene"
+                    src="assets/diogene3d.glb"
                 ></a-asset-item>
                                 <a-asset-item
                     id="afro2"
@@ -35,26 +35,23 @@
                     id="afro3"
                     src="assets/asset.gltf"
                 ></a-asset-item>
-                <audio id="music" src="assets/audio.mp3" preload="auto"
-                ></audio>
             </a-assets>
 
             <a-marker
-                id="smileymarker"
+                id="diogenemarker"
                 type="pattern"
                 preset="custom"
-                url="assets/smileymarker.patt"
+                url="assets/diogenemarker.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 smooth="true"
                 cursor="fuse: false; rayOrigin: mouse;"
             >
                 <a-entity
-                    id="afro-model1"
+                    id="diogene-model"
                     scale="0.08 0.08 0.08"
                     animation-mixer="loop: repeat"
-                    gltf-model="#afro"
-                    sound="src: #music; autoplay:true"
+                    gltf-model="#diogene"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -73,7 +70,6 @@
                     id="afro-model2"
                     scale="5 5 5"
                     gltf-model="#afro2"
-                    sound="src: #music; autoplay:true"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -93,7 +89,6 @@
                     scale="0.08 0.08 0.08"
                     animation-mixer="loop: repeat"
                     gltf-model="#afro3"
-                    sound="src: #music; autoplay:true"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
