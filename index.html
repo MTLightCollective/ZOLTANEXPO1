@@ -18,7 +18,7 @@
         <a-assets>
             <a-asset-item id="diogene" src="assets/diogene3d.glb"></a-asset-item>
             <a-asset-item id="venus" src="assets/venus3d.glb"></a-asset-item>
-            <a-asset-item id="psyche" src="assets/psyche3d.glb"></a-asset-item>
+            <a-asset-item id="psyche" src="assets/psyche3d.glb" animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-asset-item>
         </a-assets>
         <a-marker id="diogenemarker"
                   type="pattern"
@@ -29,9 +29,9 @@
                   smooth="true"
                   cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="diogeneARmodel"
-                      scale="1 1 1"
+                      scale="3 3 3"
                       gltf-model="#diogene"
-                      animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-entity>
+                      ></a-entity>
         </a-marker>
         <a-marker id="venusmarker"
                   type="pattern"
@@ -42,7 +42,7 @@
                   smooth="true"
                   cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="venusARmodel"
-                      scale="3 3 3"
+                      scale="6 6 6"
                       gltf-model="#venus"
                       animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-entity>
         </a-marker>
@@ -55,7 +55,7 @@
                   smooth="true"
                   cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="psycheARmodel"
-                      scale="2 2 2"
+                      scale="6 6 6"
                       animation-mixer="loop: repeat"
                       gltf-model="#psyche"
                       animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-entity>
