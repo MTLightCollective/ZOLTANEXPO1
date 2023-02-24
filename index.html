@@ -17,13 +17,13 @@
              gesture-detector>
         <a-assets>
             <a-asset-item id="diogene" src="assets/diogene3d.glb"></a-asset-item>
-            <a-asset-item id="venus" src="assets/venus.gltf"></a-asset-item>
-            <a-asset-item id="afro3" src="assets/asset.gltf"></a-asset-item>
+            <a-asset-item id="venus" src="assets/venus3d.gltf"></a-asset-item>
+            <a-asset-item id="psyche" src="assets/psyche3d.gltf"></a-asset-item>
         </a-assets>
-        <a-marker id="diogenemarker2"
+        <a-marker id="diogenemarker"
                   type="pattern"
                   preset="custom"
-                  url="assets/diogenemarker2.patt"
+                  url="assets/diogenemarker.patt"
                   raycaster="objects: .clickable"
                   emitevents="true"
                   smooth="true"
@@ -48,18 +48,18 @@
                       class="clickable"
                       gesture-handler></a-entity>
         </a-marker>
-        <a-marker id="robomarker"
+        <a-marker id="psychemarker"
                   type="pattern"
                   preset="custom"
-                  url="assets/robomarker.patt"
+                  url="assets/psychemarker.patt"
                   raycaster="objects: .clickable"
                   emitevents="true"
                   smooth="true"
                   cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity id="afro-model3"
-                      scale="0.08 0.08 0.08"
+            <a-entity id="psycheARmodel"
+                      scale="1 1 1"
                       animation-mixer="loop: repeat"
-                      gltf-model="#afro3"
+                      gltf-model="#psyche"
                       class="clickable"
                       gesture-handler></a-entity>
         </a-marker>
