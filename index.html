@@ -1,94 +1,70 @@
 <!doctype html>
 <html>
-    <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-    </head>
-
-    <body>
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-assets>
-                <a-asset-item
-                    id="diogene"
-                    src="assets/diogene3d.glb"
-                ></a-asset-item>
-                                <a-asset-item
-                    id="afro2"
-                    src="assets/asset2.gltf"
-                ></a-asset-item>
-                                <a-asset-item
-                    id="afro3"
-                    src="assets/asset.gltf"
-                ></a-asset-item>
-            </a-assets>
-
-            <a-marker
-                id="diogenemarker2"
-                type="pattern"
-                preset="custom"
-                url="assets/diogenemarker2.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                smooth="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    id="diogeneARmodel"
-                    scale="1 1 1"
-                    gltf-model="#diogene"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="devilmarker"
-                type="pattern"
-                preset="custom"
-                url="assets/devilmarker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                smooth="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    id="afro-model2"
-                    scale="1 1 1"
-                    gltf-model="#diogene"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-             <a-marker
-                id="robomarker"
-                type="pattern"
-                preset="custom"
-                url="assets/robomarker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                smooth="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    id="afro-model3"
-                    scale="0.08 0.08 0.08"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#afro3"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+</head>
+<body>
+    <a-scene vr-mode-ui="enabled: false;"
+             loading-screen="enabled: false;"
+             renderer="logarithmicDepthBuffer: true;"
+             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+             id="scene"
+             embedded
+             gesture-detector>
+        <a-assets>
+            <a-asset-item id="diogene" src="assets/diogene3d.glb"></a-asset-item>
+            <a-asset-item id="afro2" src="assets/asset2.gltf"></a-asset-item>
+            <a-asset-item id="afro3" src="assets/asset.gltf"></a-asset-item>
+        </a-assets>
+        <a-marker id="diogenemarker2"
+                  type="pattern"
+                  preset="custom"
+                  url="assets/diogenemarker2.patt"
+                  raycaster="objects: .clickable"
+                  emitevents="true"
+                  smooth="true"
+                  cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="diogeneARmodel"
+                      scale="1 1 1"
+                      gltf-model="#diogene"
+                      class="clickable"
+                      gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="devilmarker"
+                  type="pattern"
+                  preset="custom"
+                  url="assets/devilmarker.patt"
+                  raycaster="objects: .clickable"
+                  emitevents="true"
+                  smooth="true"
+                  cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="afro-model2"
+                      scale="1 1 1"
+                      gltf-model="#diogene"
+                      class="clickable"
+                      gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="robomarker"
+                  type="pattern"
+                  preset="custom"
+                  url="assets/robomarker.patt"
+                  raycaster="objects: .clickable"
+                  emitevents="true"
+                  smooth="true"
+                  cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="afro-model3"
+                      scale="0.08 0.08 0.08"
+                      animation-mixer="loop: repeat"
+                      gltf-model="#afro3"
+                      class="clickable"
+                      gesture-handler></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
 </html>
+
