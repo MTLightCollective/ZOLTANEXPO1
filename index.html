@@ -16,7 +16,7 @@
              embedded
              gesture-detector>
         <a-assets>
-            <a-asset-item id="diogene" src="assets/diogene3d.glb" animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-asset-item>
+            <a-asset-item id="diogene" src="assets/diogene3d.glb"></a-asset-item>
             <a-asset-item id="venus" src="assets/venus3d.glb" animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-asset-item>
             <a-asset-item id="psyche" src="assets/psyche3d.glb" animation__rotate="property: rotation; to: 0 360 0; dur: 100;"></a-asset-item>
         </a-assets>
@@ -31,6 +31,7 @@
             <a-entity id="diogeneARmodel"
                       scale="3 3 3"
                       gltf-model="#diogene"
+                      animation="property: rotation; to: 0 360 0; dur: 100; loop: true; dir: alternate"
                       ></a-entity>
         </a-marker>
         <a-marker id="venusmarker"
@@ -44,6 +45,8 @@
             <a-entity id="venusARmodel"
                       scale="6 6 6"
                       gltf-model="#venus"
+                      rotation="0 90 0"
+                      animation="property: rotation; to: 0 360 0; dur: 100; loop: true; dir: alternate"
                       ></a-entity>
         </a-marker>
         <a-marker id="psychemarker"
@@ -56,8 +59,8 @@
                   cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="psycheARmodel"
                       scale="6 6 6"
-                      animation-mixer="loop: repeat"
                       gltf-model="#psyche"
+                      animation="property: rotation; to: 0 360 0; dur: 100; loop: true; dir: alternate"
                       ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
