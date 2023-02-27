@@ -11,10 +11,9 @@
     <a-scene vr-mode-ui="enabled: false;"
              loading-screen="enabled: false;"
              renderer="logarithmicDepthBuffer: true;"
-             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; maxDetectionRate: 60; detectionMode: mono;"
              id="scene"
-             embedded
-             gesture-detector>
+             embedded>
         <a-assets>
             <a-asset-item id="diogene" src="assets/diogene3d.glb"></a-asset-item>
             <a-asset-item id="venus" src="assets/venus3d.glb"></a-asset-item>
@@ -26,7 +25,8 @@
                   url="assets/diogenemarker.patt"
                   emitevents="true"
                   smooth="true"
-                  cursor="fuse: false; rayOrigin: mouse;">
+                  smoothCount=0
+                  smoothTolerance=0.0001>
             <a-entity id="diogeneARmodel"
                       scale="2 2 2"
                       gltf-model="#diogene"
@@ -40,7 +40,8 @@
                   url="assets/venusmarker.patt"
                   emitevents="true"
                   smooth="true"
-                  cursor="fuse: false; rayOrigin: mouse;">
+                  smoothCount=0
+                  smoothTolerance=0.0001>
             <a-entity id="venusARmodel"
                       scale="5 5 5"
                       gltf-model="#venus"
@@ -53,7 +54,8 @@
                   url="assets/psychemarker.patt"
                   emitevents="true"
                   smooth="true"
-                  cursor="fuse: false; rayOrigin: mouse;">
+                  smoothCount=0
+                  smoothTolerance=0.0001>
             <a-entity id="psycheARmodel"
                       scale="4 4 4"
                       gltf-model="#psyche"
