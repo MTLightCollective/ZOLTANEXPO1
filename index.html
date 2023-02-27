@@ -6,24 +6,6 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-    <link rel="stylesheet" href="https://kit.fontawesome.com/188d1d50dc.css" crossorigin="anonymous">
-    <style>
-      #exit-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 9999;
-        background-color: #fff;
-        color: #000;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        font-size: 20px;
-        line-height: 50px;
-        cursor: pointer;
-      }
-    </style>
 </head>
 <body>
     <a-scene vr-mode-ui="enabled: false;"
@@ -79,9 +61,6 @@
                       ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
-            <button id="exit-button" onclick="location.reload()">
-                <i class="fas fa-skull"></i>
-            </button>
     </a-scene>
 </body>
 </html>
